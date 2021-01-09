@@ -1,3 +1,9 @@
+.Nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
 .Nav ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -8,7 +14,6 @@
 }
 
 .Nav li {
-
   font-size: 1.2rem;
   display: flex;
   align-items: center;
@@ -20,6 +25,11 @@
   color: white;
   display: flex;
   padding: 20px 20px;
+  font-weight: 700;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .Nav a:hover {
@@ -37,7 +47,7 @@
 }
 
 .cart-quantity {
-  height: 10px;
+  height: 18px;
   font-size: 16px;
   line-height: 12px;
   margin-bottom: 10px;
