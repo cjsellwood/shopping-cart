@@ -45,17 +45,35 @@ const App = () => {
     const value = currentQuantity;
     setCurrentQuantity(0);
     // Exit if 0 or less
-    console.log(value);
     if (value <= 0) {
       return;
     }
-    const dataCopy = duplicateData(data);
-    const index = e.target.getAttribute("data-index");
-    dataCopy[index].quantity += value;
-    setData(dataCopy);
-    console.log(data);
-  };
 
+    // Index in data array
+    const index = e.target.getAttribute("data-index");
+    const name = data[index].name;
+    const cartCopy = duplicateData(cart);
+
+    // Return product matching name from data
+    const cartProduct = cartCopy.filter((item) => {
+      return item.name === name;
+    })[0];
+  
+    // Find if product already in cart array
+    const cartIndex = cartCopy.indexOf(cartProduct);
+
+    // Add new if wasn't found in cart array
+    if (cartIndex === -1) {
+      cartCopy.push(data[index]);
+      cartCopy[cartCopy.length - 1].quantity = value;
+
+    // Else add to already added product
+    } else {
+      cartCopy[cartIndex].quantity += value;
+    }
+    setCart(cartCopy);
+  };
+  
   return (
     <div className="App">
       <Nav cart={cart} />
