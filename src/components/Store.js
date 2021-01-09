@@ -1,15 +1,14 @@
 import React from "react";
+import "./Store.css";
 
 const Store = (props) => {
-  console.log(props.location.state);
-  return (
+  const itemsArray = props.data.map((item) => (
     <div>
-      Store
-      <p>{props.location.state.name}</p>
-      <p>{props.location.state.quantity}</p>
-      <button onClick={props.location.state.addOne}>Add One</button>
+      <h1>{item.number}: {item.name} </h1>
+      <img className="product-image" src={item.src} alt={item.name} />
     </div>
-  );
+  ));
+  return <div>{itemsArray}</div>;
 };
 
 export default Store;
