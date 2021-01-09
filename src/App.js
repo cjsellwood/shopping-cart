@@ -85,7 +85,7 @@ const App = () => {
           <Store data={data} addOne={addOne} />
         </Route>
         <Route path="/cart">
-          <Cart />
+          <Cart cart={cart}/>
         </Route>
         <Route path="/store/:name">
           <Product
