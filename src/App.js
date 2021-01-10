@@ -80,9 +80,6 @@ const App = () => {
     setCart(cartCopy);
   };
 
-  // #TODO - change navbar logo
-  // #TODO - get image for each metal
-
   return (
     <div className="App">
       <ScrollToTop/>
