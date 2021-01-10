@@ -1,0 +1,131 @@
+.cart-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+
+.cart-item {
+  text-decoration: none;
+  color: black;
+  display: grid;
+  grid-template-columns: 30% 30% 30% 10%;
+  margin: 10px 0;
+}
+
+.cart-item:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+@media (min-width: 600px) {
+  .cart-item {
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+  }
+}
+
+.cart-item div {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item .cart-image-container {
+  padding: 0;
+  max-height: 150px;
+}
+
+.cart-image {
+  height: 100%;
+  width: 100%;
+}
+
+.cart-item .cart-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+@media (min-width: 600px) {
+
+  .cart-item .cart-image-container {
+    margin-right: auto;
+  }
+
+  .cart-image {
+    max-height: 150px;
+    width: auto;
+  }
+
+  .cart-item .cart-details-container {
+    flex-direction: row;
+  }
+}
+
+.remove-button {
+  height: 50px;
+  width: 50px;
+  color: black;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.remove-button:hover {
+  color: red;
+}
+
+.total-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 30% 30% 30% 10%;
+  border-top: 1px solid black;
+}
+
+@media (min-width: 600px) {
+  .total-container {
+    grid-template-columns: 1fr;
+  }
+
+  .total-container div {
+    margin-left: auto;
+  }
+}
+
+.total-container div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.total-container h1, .total-container button, .total-container h2 {
+  margin: 10px;
+  font-size: 1.3rem;
+}
+
+.total-container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.total-container button {
+  font-size: 1.1rem;
+  padding: 10px 30px;
+  background-color: rgb(36, 35, 35);
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.total-container button:hover {
+  background-color: rgb(85, 85, 85);
+}
+

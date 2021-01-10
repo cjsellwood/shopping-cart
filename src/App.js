@@ -10,15 +10,8 @@ import Product from "./components/Product";
 
 const App = () => {
   const [cart, setCart] = useState([]);
-
   const [data, setData] = useState(inventory);
   const [currentQuantity, setCurrentQuantity] = useState(0);
-
-  const addOne = () => {
-    const newData = { ...data };
-    newData.quantity = data.quantity + 1;
-    setData(newData);
-  };
 
   // Duplicate data array with deep cloning
   const duplicateData = (array) => {
@@ -31,11 +24,6 @@ const App = () => {
 
   // Change quantity before adding to cart
   const changeQuantity = (e) => {
-    // const index = e.target.getAttribute("data-index");
-    // const dataCopy = duplicateData(data);
-    // dataCopy[index].quantity = e.target.value;
-    // console.log(dataCopy[index])
-    // setData(dataCopy);
     setCurrentQuantity(Number(e.target.value));
   };
 
@@ -44,6 +32,7 @@ const App = () => {
     e.preventDefault();
     const value = currentQuantity;
     setCurrentQuantity(0);
+
     // Exit if 0 or less
     if (value <= 0) {
       return;
@@ -58,7 +47,7 @@ const App = () => {
     const cartProduct = cartCopy.filter((item) => {
       return item.name === name;
     })[0];
-  
+
     // Find if product already in cart array
     const cartIndex = cartCopy.indexOf(cartProduct);
 
@@ -67,13 +56,32 @@ const App = () => {
       cartCopy.push(data[index]);
       cartCopy[cartCopy.length - 1].quantity = value;
 
-    // Else add to already added product
+      // Else add to already added product
     } else {
       cartCopy[cartIndex].quantity += value;
     }
     setCart(cartCopy);
   };
-  
+
+  // Format to 2 decimal places and with commas every 3 digits
+  const formatPrice = (price) => {
+    return Number(price.toFixed(2)).toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+    });
+  };
+
+  // Remove item from cart
+  const removeItem = (e) => {
+    e.preventDefault();
+    const index = e.target.getAttribute("data-index");
+    const cartCopy = duplicateData(cart);
+    cartCopy.splice(index, 1);
+    setCart(cartCopy);
+  };
+
+  // #TODO - change navbar logo
+  // #TODO - get image for each metal
+
   return (
     <div className="App">
       <Nav cart={cart} />
@@ -82,10 +90,14 @@ const App = () => {
           <MetalMart />
         </Route>
         <Route exact path="/store">
-          <Store data={data} addOne={addOne} />
+          <Store data={data} formatPrice={formatPrice} />
         </Route>
         <Route path="/cart">
-          <Cart cart={cart}/>
+          <Cart
+            cart={cart}
+            formatPrice={formatPrice}
+            removeItem={(e) => removeItem(e)}
+          />
         </Route>
         <Route path="/store/:name">
           <Product
@@ -93,6 +105,7 @@ const App = () => {
             changeQuantity={(e) => changeQuantity(e)}
             data={data}
             addToCart={(e) => addToCart(e)}
+            formatPrice={formatPrice}
           />
         </Route>
       </Switch>

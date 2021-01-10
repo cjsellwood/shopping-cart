@@ -47,7 +47,8 @@
 }
 
 .cart-quantity {
-  height: 18px;
+  min-width: 20px;
+  height: 20px;
   font-size: 16px;
   line-height: 12px;
   margin-bottom: 10px;
@@ -60,4 +61,7 @@
   -moz-border-radius: 100px;
   -ms-border-radius: 100px;
   -o-border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
