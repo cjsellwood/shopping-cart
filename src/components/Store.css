@@ -23,7 +23,6 @@
   .store-container {
     max-width: 1500px;
     margin: 40px auto;
-
   }
 
   .store-item {
@@ -31,8 +30,23 @@
   }
 }
 
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+}
+
+@media (min-width: 600px) {
+  .product-image-container {
+    height: 250px;
+  }
+}
+
 .product-image {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .product-details {

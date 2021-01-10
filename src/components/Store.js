@@ -11,7 +11,7 @@ const Store = (props) => {
       className="store-item"
       key={item.number}
     >
-      <div>
+      <div className="product-image-container">
         <img className="product-image" src={item.src} alt={item.name} />
       </div>
       <div className="product-details">

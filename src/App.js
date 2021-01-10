@@ -7,6 +7,7 @@ import Cart from "./components/Cart";
 import Nav from "./components/Nav";
 import inventory from "./inventory";
 import Product from "./components/Product";
+import ScrollToTop from "./ScrollToTop"
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -84,6 +85,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <ScrollToTop/>
       <Nav cart={cart} />
       <Switch>
         <Route path="/" exact>
