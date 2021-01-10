@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import MetalMart from "./components/MetalMart";
 import Store from "./components/Store";
@@ -7,11 +7,23 @@ import Cart from "./components/Cart";
 import Nav from "./components/Nav";
 import inventory from "./inventory";
 import Product from "./components/Product";
-import ScrollToTop from "./ScrollToTop"
+import ScrollToTop from "./ScrollToTop";
 
 const App = () => {
   const [cart, setCart] = useState([]);
-  const [data, ] = useState(inventory);
+
+  const storeCart = (cart) => {
+    localStorage.setItem("cart", JSON.stringify(cart))
+  }
+
+  // Get cart from local storage
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart !== null) {
+      setCart(JSON.parse(storedCart));
+    }
+  }, []);
+  const [data] = useState(inventory);
   const [currentQuantity, setCurrentQuantity] = useState(0);
 
   // Duplicate data array with deep cloning
@@ -62,6 +74,7 @@ const App = () => {
       cartCopy[cartIndex].quantity += value;
     }
     setCart(cartCopy);
+    storeCart(cartCopy);
   };
 
   // Format to 2 decimal places and with commas every 3 digits
@@ -78,17 +91,17 @@ const App = () => {
     const cartCopy = duplicateData(cart);
     cartCopy.splice(index, 1);
     setCart(cartCopy);
+    storeCart(cartCopy);
   };
 
   // Ideas:
   // Sort Store button
   // Dark Mode
   // Show added to cart better
-  // Save cart in local storage
 
   return (
     <div className="App">
-      <ScrollToTop/>
+      <ScrollToTop />
       <Nav cart={cart} />
       <Switch>
         <Route path="/" exact>
