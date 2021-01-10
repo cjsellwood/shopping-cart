@@ -79,7 +79,7 @@ const inventory = [
     number: 30,
     price: 2.55,
     quantity: 0,
-    src: Gold,
+    src: Zinc,
   },
   {
     name: "Silver",

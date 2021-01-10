@@ -4,6 +4,12 @@
   padding: 5px;
 }
 
+@media (min-width: 600px) {
+  .cart-container {
+    margin: 50px auto;
+  }
+}
+
 
 .cart-item {
   text-decoration: none;
@@ -33,11 +39,13 @@
 .cart-item .cart-image-container {
   padding: 0;
   max-height: 150px;
+
 }
 
 .cart-image {
   height: 100%;
   width: 100%;
+  max-width: 100%;
 }
 
 .cart-item .cart-details-container {
@@ -51,6 +59,7 @@
 
   .cart-item .cart-image-container {
     margin-right: auto;
+    min-width: 200px;
   }
 
   .cart-image {
