@@ -1,0 +1,26 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(82, 85, 90);
+  background: linear-gradient(rgb(206, 206, 206), rgb(47, 47, 47));
+  height: calc(100vh - 70px);
+}
+
+.home-container > div {
+  margin: 0 auto;
+}
+
+.home-image {
+  width: 80vw;
+  max-width: 600px;
+  margin: 0 0 60px 0;
+}
+
+.home-container h1 {
+  color: white;
+  text-align: center;
+  font-size: min(6vw, 50px);
+  line-height: 1.5;
+}
