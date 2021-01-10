@@ -17,7 +17,9 @@ const Store = (props) => {
       </div>
     </Link>
   ));
-  return <div className="store-container">{itemsArray}</div>;
+  return <div className="store-container">
+    <div>
+      </div>{itemsArray}</div>;
 };
 
 export default Store;

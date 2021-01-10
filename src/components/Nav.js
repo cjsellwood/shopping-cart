@@ -1,13 +1,16 @@
 import React from "react";
 import "./Nav.css";
 import { Link } from "react-router-dom";
+import Logo from "../images/logo.png";
 
 const Nav = (props) => {
   return (
     <nav className="Nav">
       <ul>
         <li>
-          <Link to="/">MetalMart</Link>
+          <Link to="/">
+            <img className="logo" src={Logo} alt="Logo"/>
+          </Link>
         </li>
         <li>
           <Link to="/store">Store</Link>
