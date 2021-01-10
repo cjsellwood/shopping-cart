@@ -19,8 +19,10 @@
 }
 
 .home-container h1 {
-  color: white;
+  color: rgb(235, 235, 235);
   text-align: center;
   font-size: min(6vw, 50px);
   line-height: 1.5;
+  text-shadow: 1px 1px 1px black;
+  text-transform: capitalize;
 }
