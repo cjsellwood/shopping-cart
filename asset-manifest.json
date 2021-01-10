@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.b072e18a.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.22cc71d8.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.22cc71d8.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.b56c1ee8.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.b56c1ee8.js.map",
+    "static/js/2.659f2163.chunk.js": "/shopping-cart/static/js/2.659f2163.chunk.js",
+    "static/js/2.659f2163.chunk.js.map": "/shopping-cart/static/js/2.659f2163.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/main.b072e18a.chunk.css.map": "/shopping-cart/static/css/main.b072e18a.chunk.css.map",
+    "static/js/2.659f2163.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.659f2163.chunk.js.LICENSE.txt",
+    "static/media/Aluminium.ef7f3ba4.jpg": "/shopping-cart/static/media/Aluminium.ef7f3ba4.jpg",
+    "static/media/Cobalt.0242e03a.jpg": "/shopping-cart/static/media/Cobalt.0242e03a.jpg",
+    "static/media/Copper.46ac55d1.jpg": "/shopping-cart/static/media/Copper.46ac55d1.jpg",
+    "static/media/Gold.65ed9b63.jpg": "/shopping-cart/static/media/Gold.65ed9b63.jpg",
+    "static/media/Iron.a4bb1cf2.jpg": "/shopping-cart/static/media/Iron.a4bb1cf2.jpg",
+    "static/media/Lead.c792e200.jpg": "/shopping-cart/static/media/Lead.c792e200.jpg",
+    "static/media/Lithium.844a1ea0.jpg": "/shopping-cart/static/media/Lithium.844a1ea0.jpg",
+    "static/media/Magnesium.0ced9276.jpg": "/shopping-cart/static/media/Magnesium.0ced9276.jpg",
+    "static/media/Nickel.b5d4ca46.jpg": "/shopping-cart/static/media/Nickel.b5d4ca46.jpg",
+    "static/media/Platinum.284e97d4.jpg": "/shopping-cart/static/media/Platinum.284e97d4.jpg",
+    "static/media/Silver.c65116a3.jpg": "/shopping-cart/static/media/Silver.c65116a3.jpg",
+    "static/media/Tin.f1a374dd.jpg": "/shopping-cart/static/media/Tin.f1a374dd.jpg",
+    "static/media/Titanium.d26f0f4c.jpg": "/shopping-cart/static/media/Titanium.d26f0f4c.jpg",
+    "static/media/Tungsten.b04799bd.jpg": "/shopping-cart/static/media/Tungsten.b04799bd.jpg",
+    "static/media/Uranium.137460d0.jpg": "/shopping-cart/static/media/Uranium.137460d0.jpg",
+    "static/media/Zinc.d0a94a34.jpg": "/shopping-cart/static/media/Zinc.d0a94a34.jpg",
+    "static/media/logo.25994b6b.png": "/shopping-cart/static/media/logo.25994b6b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b56c1ee8.js",
+    "static/js/2.659f2163.chunk.js",
+    "static/css/main.b072e18a.chunk.css",
+    "static/js/main.22cc71d8.chunk.js"
+  ]
+}
