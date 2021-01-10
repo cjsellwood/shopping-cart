@@ -11,7 +11,7 @@ import ScrollToTop from "./ScrollToTop"
 
 const App = () => {
   const [cart, setCart] = useState([]);
-  const [data, setData] = useState(inventory);
+  const [data, ] = useState(inventory);
   const [currentQuantity, setCurrentQuantity] = useState(0);
 
   // Duplicate data array with deep cloning
@@ -79,6 +79,12 @@ const App = () => {
     cartCopy.splice(index, 1);
     setCart(cartCopy);
   };
+
+  // Ideas:
+  // Sort Store button
+  // Dark Mode
+  // Show added to cart better
+  // Save cart in local storage
 
   return (
     <div className="App">
